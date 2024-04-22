@@ -1,0 +1,1 @@
+export const MAIN_INIT_DATA_API = "/main";
