@@ -61,6 +61,7 @@ public class SecurityConfig {
                     request
                             .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                             .requestMatchers(antMatcher("/auth/**")).permitAll()
+                            .requestMatchers(antMatcher("/main")).permitAll()
                             .anyRequest().authenticated();
                 })
                 .cors(

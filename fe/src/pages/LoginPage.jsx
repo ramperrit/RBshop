@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../constants/Header";
 import Footer from "../constants/Footer";
 import "../constants/layout1.css";
@@ -41,6 +41,10 @@ export default function LoginPage() {
     }
   }
 
+  function Signup(){
+    navigate(SIGN_UP);
+  }
+
   return (
     <>
       <Header />
@@ -63,7 +67,8 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className="btn btn-primary">로그인</button>
-          <button type="button" className="btn btn-primary" onClick={navigate(SIGN_UP)}>회원가입</button>
+
+          <button type="button" className="btn btn-primary" onClick={Signup}>회원가입</button>
         </form>
       </div>
       <Footer />
